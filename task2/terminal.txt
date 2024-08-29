@@ -1,0 +1,12 @@
+##creating virtual env
+py -m venv en
+
+##installing  requests pip and MySQL pip
+
+pip install requests
+pip install PyMySQL
+
+## requirements .txt
+pip freeze > requirements.txt
+
+##

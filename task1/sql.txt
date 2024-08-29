@@ -1,0 +1,12 @@
+create database Task
+
+#creating table
+
+CREATE TABLE movie_info (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  Title VARCHAR(255) NOT NULL,
+  Released DATE,
+  Director VARCHAR(255) NOT NULL,
+  Genre VARCHAR(255)
+);
+

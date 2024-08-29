@@ -1,0 +1,7 @@
+## install flask
+pip install Flask SQLAlchemy
+pip install flask_sqlalchemy
+
+
+## activating Flask
+$env:FLASK_APP = "app"

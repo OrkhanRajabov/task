@@ -2,18 +2,26 @@ from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///movies.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///Task.db'
 db = SQLAlchemy(app)
 
-class Movie(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(100), nullable=False)
-    released = db.Column(db.Integer, nullable=False)
-    director = db.Column(db.String(100), nullable=False)
-    genre = db.Column(db.String(50), nullable=False)
+# class Movie(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     title = db.Column(db.String(100), nullable=False)
+#     released = db.Column(db.Integer, nullable=False)
+#     director = db.Column(db.String(100), nullable=False)
+#     genre = db.Column(db.String(50), nullable=False)
 
-db.create_all()
 
+# with app.app_context():
+#     db.create_all()
+
+
+
+
+@app.route('/hello/')
+def non():
+    return "Hello World"
 @app.route('/movies/')
 def movies():
     all_movies = Movie.query.all()
